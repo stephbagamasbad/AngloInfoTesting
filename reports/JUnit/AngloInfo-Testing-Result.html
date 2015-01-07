@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Unit Test Results.</title>
+<style type="text/css">
+      body {
+        font:normal 68% verdana,arial,helvetica;
+        color:#000000;
+      }
+      table tr td, table tr th {
+          font-size: 68%;
+      }
+      table.details tr th{
+        font-weight: bold;
+        text-align:left;
+        background:#a6caf0;
+      }
+      table.details tr td{
+        background:#eeeee0;
+      }
+
+      p {
+        line-height:1.5em;
+        margin-top:0.5em; margin-bottom:1.0em;
+      }
+      h1 {
+        margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+      }
+      h2 {
+        margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+      }
+      h3 {
+        margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+      }
+      h4 {
+        margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+      }
+      h5 {
+        margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+      }
+      h6 {
+        margin-bottom: 0.5em; font: bold 100% verdana,arial,helvetica
+      }
+      .Error {
+        font-weight:bold; color:red;
+      }
+      .Failure {
+        font-weight:bold; color:purple;
+      }
+      .Properties {
+        text-align:right;
+      }
+      </style>
+<script type="text/javascript" language="JavaScript">
+        var TestCases = new Array();
+        var cur;
+        </script><script type="text/javascript" language="JavaScript">
+        function displayProperties (name) {
+          var win = window.open('','JUnitSystemProperties','scrollbars=1,resizable=1');
+          var doc = win.document;
+          doc.open();
+          doc.write("<html><head><title>Properties of " + name + "</title>");
+          doc.write("<style>")
+          doc.write("body {font:normal 68% verdana,arial,helvetica; color:#000000; }");
+          doc.write("table tr td, table tr th { font-size: 68%; }");
+          doc.write("table.properties { border-collapse:collapse; border-left:solid 1 #cccccc; border-top:solid 1 #cccccc; padding:5px; }");
+          doc.write("table.properties th { text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#eeeeee; }");
+          doc.write("table.properties td { font:normal; text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#fffffff; }");
+          doc.write("h3 { margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica }");
+          doc.write("</style>");
+          doc.write("</head><body>");
+          doc.write("<h3>Properties of " + name + "</h3>");
+          doc.write("<div align=\"right\"><a href=\"javascript:window.close();\">Close</a></div>");
+          doc.write("<table class='properties'>");
+          doc.write("<tr><th>Name</th><th>Value</th></tr>");
+          for (prop in TestCases[name]) {
+            doc.write("<tr><th>" + prop + "</th><td>" + TestCases[name][prop] + "</td></tr>");
+          }
+          doc.write("</table>");
+          doc.write("</body></html>");
+          doc.close();
+          win.focus();
+        }
+      
+      </script>
+</head>
+<body>
+<a name="top"></a>
+<h1>Unit Test Results.</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org">JUnit</a> and <a href="http://ant.apache.org/ant">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h2>Summary</h2>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Tests</th><th>Failures</th><th>Errors</th><th>Skipped</th><th>Success rate</th><th>Time</th>
+</tr>
+<tr valign="top" class="Failure">
+<td>5</td><td>1</td><td>0</td><td>0</td><td>80.00%</td><td>140.512</td>
+</tr>
+</table>
+<table border="0" width="95%">
+<tr>
+<td style="text-align: justify;">
+        Note: <i>failures</i> are anticipated and checked for with assertions while <i>errors</i> are unanticipated.
+        </td>
+</tr>
+</table>
+<hr size="1" width="95%" align="left">
+<h2>Packages</h2>
+        Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.
+        <table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#com.angloinfo.tests">com.angloinfo.tests</a></td><td>5</td><td>0</td><td>1</td><td>0</td><td>140.512</td><td>21 Nov 2014 10:35:54 GMT</td><td>WKSN-063</td>
+</tr>
+</table>
+<hr size="1" width="95%" align="left">
+<a name="com.angloinfo.tests"></a>
+<h3>Package com.angloinfo.tests</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="#FooterTest">FooterTest</a></td><td>5</td><td>0</td><td>1</td><td></td><td>140.512</td><td>21 Nov 2014 10:35:54 GMT</td><td>WKSN-063</td>
+</tr>
+</table>
+<a href="#top">Back to top</a>
+<p></p>
+<p></p>
+<hr size="1" width="95%" align="left">
+<a name="FooterTest"></a>
+<h3>TestCase FooterTest</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="">
+<td>testDirectoryRedirection</td><td>Success</td><td></td><td>28.416</td>
+</tr>
+<tr valign="top" class="Error">
+<td>testDiscussionRedirection</td><td>Failure</td><td>can not find P(C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\discussions.png) S: 0.7 on the screen.<code>
+<br>
+<br>
+<br>      FindFailed: can not find P(C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\discussions.png) S: 0.7 on the screen.<br>  Line 1574, in file Region.java<br>
+<br>	at org.sikuli.script.Region.handleFindFailed(Region.java:1574)<br>	at org.sikuli.script.Region.wait(Region.java:1682)<br>	at com.angloinfo.util.Utility.isImgInScreen(Utility.java:442)<br>	at com.angloinfo.fixtures.Footer.isPageDisplayed(Footer.java:219)<br>	at com.angloinfo.fixtures.Footer.isDiscussionsDisplayed(Footer.java:150)<br>	at com.angloinfo.tests.FooterTest.testDiscussionRedirection(FooterTest.java:58)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>	at java.lang.reflect.Method.invoke(Method.java:483)<br>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br>	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>	at org.testng.TestRunner.privateRun(TestRunner.java:767)<br>	at org.testng.TestRunner.run(TestRunner.java:617)<br>	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)<br>	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)<br>	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)<br>	at java.util.concurrent.FutureTask.run(FutureTask.java:266)<br>	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br>	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br>	at java.lang.Thread.run(Thread.java:745)<br>
+<br>    
+</code></td><td>31.849</td>
+</tr>
+<tr valign="top" class="">
+<td>testScrolling</td><td>Success</td><td></td><td>21.139</td>
+</tr>
+<tr valign="top" class="">
+<td>testGuidesRedirection</td><td>Success</td><td></td><td>30.689</td>
+</tr>
+<tr valign="top" class="">
+<td>testWhatsOnRedirection</td><td>Success</td><td></td><td>28.419</td>
+</tr>
+</table>
+<div class="Properties">
+<a href="javascript:displayProperties('com.angloinfo.tests.FooterTest');">
+                    Properties &raquo;
+                </a>
+</div>
+<p></p>
+<a href="#top">Back to top</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [AngloInfo Testing]" parallel="tests">
+  <parameter name="browser.host" value="WKSN-063"/>
+  <parameter name="browser.testBrowser" value="*firefox"/>
+  <parameter name="browser.port" value="4444"/>
+  <parameter name="browser.url" value="http://cumberbatch.me"/>
+  <parameter name="ai.propertiesFile" value="C:\\Users\\stephb\\workspace\\AngloInfoTesting\\resources\\aiData.properties"/>
+  <parameter name="ai.autoAuthFile" value="C:\\Users\\stephb\\workspace\\AngloInfoTesting\\resources\\autoauth-2.1-fx+fn.xpi"/>
+  <parameter name="ai.expectedImg" value="C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\"/>
+  <listeners>
+    <listener class-name="com.angloinfo.interceptor.PriorityInterceptor"/>
+  </listeners>
+  <test name="Footer Test(failed)" parallel="tests">
+    <classes>
+      <class name="com.angloinfo.tests.FooterTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testDiscussionRedirection"/>
+          <include name="setUP"/>
+        </methods>
+      </class> <!-- com.angloinfo.tests.FooterTest -->
+    </classes>
+  </test> <!-- Footer Test(failed) -->
+</suite> <!-- Failed suite [AngloInfo Testing] -->

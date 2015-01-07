@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="AngloInfo Testing" default="build" basedir=".">
+
+	<property name="sourceDir" location="src" />
+	<property name="buildDir" location="bin" />
+	<property name="resourcesDir" location="resources" />
+	<property name="reportDir" location="reports" />
+	<property name="libDir" location="lib" />
+	<property name="testSuiteLocation" location="testSuite" />
+
+	<path id="master-classpath">
+		<fileset dir="${libDir}">
+			<include name="*.jar">
+			</include>
+		</fileset>
+		<pathelement path="${buildDir}">
+		</pathelement>
+	</path>
+
+	<taskdef resource="testngtasks" classpath="${libDir}/testng-6.8.8.jar" />
+
+	<!-- DELETE bin and reports directory -->
+	<target name="clean" description="Remove the build and report directories">
+		<delete dir="${buildDir}" />
+		<delete dir="${reportDir}" />
+	</target>
+
+	<!-- BUILD the tests -->
+	<target name="build" description="Creates a build of the test suite.">
+		<echo>"Making directory ${buildDir}"</echo>
+		<mkdir dir="${buildDir}" />
+		<echo>"Making directory ${reportDir}"</echo>
+		<mkdir dir="${reportDir}" />
+
+		<echo>"Doing build..."</echo>
+		<javac destdir="${buildDir}" debug="true" deprecation="false" failonerror="true">
+			<src path="${sourceDir}" />
+			<classpath refid="master-classpath">
+			</classpath>
+		</javac>
+
+	</target>
+
+
+	<taskdef name="testng" classpathref="master-classpath" classname="org.testng.TestNGAntTask" />
+
+	<taskdef name="mymail" classpathref="master-classpath" classname="org.apache.tools.ant.taskdefs.email.EmailTask" />
+
+	<!-- RUN the tests-->
+	<target name="doTest" depends="clean,build">
+	
+		<testng classpathref="master-classpath" outputdir="${reportDir}" workingDir="${buildDir}">
+
+			<!-- Specify suites or scripts to run here -->
+			<!-- <xmlfileset dir="${testSuiteLocation}" includes="*.xml" />	-->
+			
+			<xmlfileset dir="${testSuiteLocation}" includes="testSuiteAngloInfo.xml" />
+
+		</testng>
+	</target>
+
+	<!-- JUnit Report -->
+	<target name="reports">
+		<delete dir="${reportDir}/JUnit">
+		</delete>
+		<mkdir dir="${reportDir}/JUnit">
+		</mkdir>
+		<junitreport todir="${reportDir}/JUnit">
+			<fileset dir="${reportDir}/junitreports">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report format="noframes" todir="${reportDir}/JUnit" />
+		</junitreport>
+	</target>
+
+	<!-- Rename File -->
+	<target name="rename">
+	    <move file="${reportDir}/index.html" tofile="${reportDir}/JUnit/index.html" />
+		<move file="${reportDir}/emailable-report.html" tofile="${reportDir}/JUnit/emailable-report.html" />
+		<move file="${reportDir}/JUnit/junit-noframes.html" tofile="${reportDir}/JUnit/AngloInfo-Testing-Result.html" />
+	</target>
+
+	<!-- Mail the report -->
+	<target name="mail" depends="doTest,reports,rename">
+	    
+		<mail messagemimetype="text/html" enableStartTLS="true" ssl="true" 
+		    mailhost="smtp.gmail.com" mailport="465" 
+		    user="steph.bagamasbad@thecoapperative.com" password="${password}" 
+		    subject="[Selenium] AngloInfo Testing Results"
+		    tolist ="coapp@thecoapperative.com, alex@thecoapperative.com" >
+			<from address="steph.bagamasbad@thecoapperative.com" />
+			<message>Done Testing AngloInfo. Please see attached results</message>
+			<fileset dir="${reportDir}/JUnit">
+				<include name="emailable-report.html" />
+				<include name="AngloInfo-Testing-Result.html" />
+				<include name="index.html" />
+			</fileset>
+
+		</mail>
+	</target>
+
+</project>
