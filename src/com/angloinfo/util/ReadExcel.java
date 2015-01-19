@@ -29,7 +29,7 @@ public class ReadExcel{
 	 */
 	private static ReadExcel instance = new ReadExcel();
 	LogUtil log = LogUtil.getInstance();
-	Utility utility = Utility.getInstance();
+	SikuliDriverUtility utility = SikuliDriverUtility.getInstance();
 	
 	public static ReadExcel getInstance(){
 		return instance;

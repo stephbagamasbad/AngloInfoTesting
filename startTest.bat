@@ -14,6 +14,6 @@ REM Browser Types
 REM "*iehta" 
 REM "*chrome" 
 
-cd C:\grid\pricing
+cd C:\Users\stephb\Documents\GitHub\AngloInfoTesting
 ant mail
 

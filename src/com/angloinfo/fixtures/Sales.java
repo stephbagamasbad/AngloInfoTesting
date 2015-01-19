@@ -7,7 +7,7 @@ import org.sikuli.script.Screen;
 
 import com.angloinfo.util.LogUtil;
 import com.angloinfo.util.StringConstants;
-import com.angloinfo.util.Utility;
+import com.angloinfo.util.SikuliDriverUtility;
 
 /**
  * Contains all add your listing test methods
@@ -16,7 +16,7 @@ import com.angloinfo.util.Utility;
  * 
  */
 public class Sales {
-	Utility utility = Utility.getInstance();
+	SikuliDriverUtility sikuliDriver = SikuliDriverUtility.getInstance();
 	LogUtil log = LogUtil.getInstance();
 
 	private static Sales instance = new Sales();
@@ -27,7 +27,7 @@ public class Sales {
 
 
 	/**
-	 * AI-110 Checks if user can see the main menu even when I scrolling
+	 * AI-110 Checks if user can see the main menu even when scrolling
 	 * 
 	 * @param driver
 	 * @param screen
@@ -41,9 +41,9 @@ public class Sales {
 		By[] selectors = { By.id(Locators.UL_MAIN_MENU),
 				By.id(Locators.UL_MY_ANGLOINFO) };
 
-		utility.scrollDown(driver);
-		if (utility.isImgInScreen(screen,Locators.IMG_NAV_BAR)
-				|| utility.areElementsDisplayed(driver, selectors)) {
+		sikuliDriver.scrollDown(driver);
+		if (sikuliDriver.isImgInScreen(screen,Locators.IMG_NAV_BAR)
+				|| sikuliDriver.areElementsDisplayed(driver, selectors)) {
 			flag = true;
 		}
 

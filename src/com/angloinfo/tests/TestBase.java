@@ -24,7 +24,7 @@ import com.angloinfo.fixtures.Guides;
 import com.angloinfo.fixtures.NavBar;
 import com.angloinfo.util.LogUtil;
 import com.angloinfo.util.PropertyLoader;
-import com.angloinfo.util.Utility;
+import com.angloinfo.util.SikuliDriverUtility;
 
 public class TestBase {
 
@@ -42,7 +42,7 @@ public class TestBase {
 	protected Footer footer= Footer.getInstance();
 	
 	
-	Utility utility = Utility.getInstance();
+	SikuliDriverUtility sikuliDriver = SikuliDriverUtility.getInstance();
 	PropertyLoader propLoader = PropertyLoader.getInstance();
 
 	@BeforeTest(alwaysRun = true)
@@ -58,9 +58,9 @@ public class TestBase {
 		FileInputStream in = new FileInputStream(f);
 		prop.load(in);
 		values = propLoader.getPropFileValues(prop);
-		utility.setImageLoc(imgFolderLoc);
+		sikuliDriver.setImageLoc(imgFolderLoc);
 		
-		String authUrl=utility.getAuthUrl(url, values.get("AUTH_USER"), values.get("AUTH_PW"));
+		String authUrl=sikuliDriver.getAuthUrl(url, values.get("AUTH_USER"), values.get("AUTH_PW"));
 		FirefoxProfile firefoxProfile = new ProfilesIni().getProfile("default");
 		File pluginAutoAuth = new File(authFile);
 		firefoxProfile.addExtension(pluginAutoAuth);

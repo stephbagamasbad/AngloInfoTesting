@@ -78,6 +78,8 @@
 	    <move file="${reportDir}/index.html" tofile="${reportDir}/JUnit/index.html" />
 		<move file="${reportDir}/emailable-report.html" tofile="${reportDir}/JUnit/emailable-report.html" />
 		<move file="${reportDir}/JUnit/junit-noframes.html" tofile="${reportDir}/JUnit/AngloInfo-Testing-Result.html" />
+		<move file="*.jpg" tofile="${reportDir}/JUnit/*.jpg" />
+		<move file="*.png" tofile="${reportDir}/JUnit/*.png" />
 	</target>
 
 	<!-- Mail the report -->
@@ -94,6 +96,8 @@
 				<include name="emailable-report.html" />
 				<include name="AngloInfo-Testing-Result.html" />
 				<include name="index.html" />
+				<include name="*.jpg" />
+				<include name="*.png" />
 			</fileset>
 
 		</mail>

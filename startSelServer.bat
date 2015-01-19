@@ -1,5 +1,5 @@
 @Echo off
-cd C:\grid\pricing\lib
-start java -jar selenium-server-standalone-2.42.2.jar
+cd C:\Users\stephb\Documents\GitHub\AngloInfoTesting\lib
+start java -jar selenium-server-standalone-2.44.0.jar
 
 

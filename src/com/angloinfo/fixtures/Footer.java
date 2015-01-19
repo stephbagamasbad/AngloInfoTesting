@@ -7,7 +7,7 @@ import org.sikuli.script.Screen;
 
 import com.angloinfo.util.LogUtil;
 import com.angloinfo.util.StringConstants;
-import com.angloinfo.util.Utility;
+import com.angloinfo.util.SikuliDriverUtility;
 
 /**
  * Contains all test methods
@@ -16,7 +16,7 @@ import com.angloinfo.util.Utility;
  * 
  */
 public class Footer {
-	Utility utility = Utility.getInstance();
+	SikuliDriverUtility sikuliDriver = SikuliDriverUtility.getInstance();
 	LogUtil log = LogUtil.getInstance();
 
 	private static Footer instance = new Footer();
@@ -51,10 +51,10 @@ public class Footer {
 				By.xpath(Locators.LNK_FOOTER_WHATS_ON),
 				By.xpath(Locators.LNK_FOOTER_DISCUSSION) };
 
-		utility.scrollToBottom(driver);
+		sikuliDriver.scrollToBottom(driver);
 		
-		if (utility.isImgInScreen(screen, Locators.IMG_FOOTER)
-				|| utility.areElementsDisplayed(driver, selectors)) {
+		if (sikuliDriver.isImgInScreen(screen, Locators.IMG_FOOTER)
+				|| sikuliDriver.areElementsDisplayed(driver, selectors)) {
 			flag = true;
 		}
 
@@ -82,10 +82,10 @@ public class Footer {
 		String[] expectedText = { StringConstants.DIRECTORY,
 				StringConstants.DIRECTORY_VERBIAGE };
 
-		WebElement lnkDirectory = utility.getElement(driver,
+		WebElement lnkDirectory = sikuliDriver.getElement(driver,
 				By.xpath(Locators.LNK_FOOTER_DIRECTORY));
 
-		utility.scrollToBottom(driver);
+		sikuliDriver.scrollToBottom(driver);
 
 		return isPageDisplayed(driver, screen, selectors, lnkDirectory,
 				Locators.IMG_DIRECTORY, expectedText);
@@ -112,10 +112,10 @@ public class Footer {
 		String[] expectedText = { StringConstants.WHATS_ON,
 				StringConstants.CLASSIFIEDS_VERBIAGE };
 		
-		WebElement lnkWhatsOn = utility.getElement(driver,
+		WebElement lnkWhatsOn = sikuliDriver.getElement(driver,
 				By.xpath(Locators.LNK_FOOTER_WHATS_ON));
 
-		utility.scrollToBottom(driver);
+		sikuliDriver.scrollToBottom(driver);
 
 		return  isPageDisplayed(driver, screen, selectors, lnkWhatsOn,
 				Locators.IMG_WHATS_ON, expectedText);
@@ -142,10 +142,10 @@ public class Footer {
 		String[] expectedText = { StringConstants.DISCUSSIONS,
 				StringConstants.DISCUSSION_VERBIAGE };
 		
-		WebElement lnkDiscussions = utility.getElement(driver,
+		WebElement lnkDiscussions = sikuliDriver.getElement(driver,
 				By.xpath(Locators.LNK_FOOTER_DISCUSSION));
 		
-		utility.scrollToBottom(driver);
+		sikuliDriver.scrollToBottom(driver);
 
 		return isPageDisplayed(driver, screen, selectors, lnkDiscussions,
 				Locators.IMG_DISCUSSIONS, expectedText);
@@ -201,10 +201,10 @@ public class Footer {
 		String[] expectedText = { StringConstants.GUIDES,
 				StringConstants.GUIDES_VERBIAGE };
 
-		WebElement lnkGuides = utility.getElement(driver,
+		WebElement lnkGuides = sikuliDriver.getElement(driver,
 				By.xpath(Locators.LNK_FOOTER_GUIDES));
 
-		utility.scrollToBottom(driver);
+		sikuliDriver.scrollToBottom(driver);
 
 		return isPageDisplayed(driver, screen, selectors, lnkGuides,
 				Locators.IMG_GUIDES, expectedText);
@@ -215,12 +215,12 @@ public class Footer {
 			String[] textArr) throws Exception {
 		boolean flag = false;
 
-		utility.click(driver, lnkElement);
-		if (utility.isImgInScreen(screen, imgLocator)
-				|| (utility.areElementsDisplayed(driver, selectors)
-						&& utility.isTextInElement(driver,
+		sikuliDriver.click(driver, lnkElement);
+		if (sikuliDriver.isImgInScreen(screen, imgLocator)
+				|| (sikuliDriver.areElementsDisplayed(driver, selectors)
+						&& sikuliDriver.isTextInElement(driver,
 								By.cssSelector(Locators.DIV_BANNER_TEXT),
-								textArr[1]) && utility.isTextInElement(driver,
+								textArr[1]) && sikuliDriver.isTextInElement(driver,
 						By.cssSelector(Locators.DIV_BANNER_TEXT), textArr[2]))) {
 			flag = true;
 

@@ -7,7 +7,7 @@ import org.sikuli.script.Screen;
 
 import com.angloinfo.util.LogUtil;
 import com.angloinfo.util.StringConstants;
-import com.angloinfo.util.Utility;
+import com.angloinfo.util.SikuliDriverUtility;
 
 /**
  * Contains all guides test methods
@@ -16,7 +16,7 @@ import com.angloinfo.util.Utility;
  * 
  */
 public class Guides {
-	Utility utility = Utility.getInstance();
+	SikuliDriverUtility sikuliDriver = SikuliDriverUtility.getInstance();
 	LogUtil log = LogUtil.getInstance();
 
 	private static Guides instance = new Guides();

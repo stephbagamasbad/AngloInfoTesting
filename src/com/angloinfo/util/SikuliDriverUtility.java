@@ -1,32 +1,15 @@
 package com.angloinfo.util;
 
-import java.awt.AWTException;
-import java.awt.Dimension;
-import java.awt.Rectangle;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Random;
 import java.util.Set;
-import java.util.StringTokenizer;
-
-import javax.imageio.ImageIO;
-
-import jxl.write.WriteException;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -35,9 +18,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
-import org.testng.annotations.Parameters;
-
-import com.thoughtworks.selenium.DefaultSelenium;
 
 /**
  * Utility class
@@ -45,10 +25,9 @@ import com.thoughtworks.selenium.DefaultSelenium;
  * @author MSRBagamasbad
  * 
  */
-public class Utility {
+public class SikuliDriverUtility {
 
-	private static Random rnd = new Random();
-	private static Utility instance = new Utility();
+	private static SikuliDriverUtility instance = new SikuliDriverUtility();
 	private String imageLoc;
 
 	WriteExcel writeExcel = WriteExcel.getInstance();
@@ -61,7 +40,7 @@ public class Utility {
 	 * 
 	 * @return instance
 	 */
-	public static Utility getInstance() {
+	public static SikuliDriverUtility getInstance() {
 		return instance;
 	}
 
@@ -81,6 +60,8 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets the url of the current window and appends authentication
+	 * credentials
 	 * 
 	 * @param url
 	 * @param username
@@ -98,6 +79,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets the url of the current window
 	 * 
 	 * @param driver
 	 * @return
@@ -107,6 +89,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets page source of currently focused window
 	 * 
 	 * @param driver
 	 * @return
@@ -116,6 +99,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets title of currently focused window
 	 * 
 	 * @param driver
 	 * @return
@@ -125,6 +109,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets id of currently focused window
 	 * 
 	 * @param driver
 	 * @return
@@ -134,6 +119,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets ids of all active browser windows
 	 * 
 	 * @param driver
 	 * @return
@@ -143,6 +129,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver switches to window with given title
 	 * 
 	 * @param driver
 	 * @param windowTitle
@@ -159,15 +146,17 @@ public class Utility {
 	}
 
 	/**
+	 * Driver switches to frame
 	 * 
 	 * @param driver
-	 * @return
+	 * @param frameLocator
 	 */
 	public void switchToFrame(WebDriver driver, String frameLocator) {
 		driver.switchTo().frame(frameLocator);
 	}
 
 	/**
+	 * Driver selects parent window
 	 * 
 	 * @param driver
 	 * @return
@@ -177,11 +166,11 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets alert text
 	 * 
 	 * @param driver
 	 * @return
-	 * @throws InterruptedException
-	 * @throws NumberFormatException
+	 * @throws Exception
 	 */
 	public String getAlert(WebDriver driver) throws Exception {
 		String text = "";
@@ -200,6 +189,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets element
 	 * 
 	 * @param driver
 	 * @param by
@@ -210,6 +200,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets a list of elements with the same selector
 	 * 
 	 * @param driver
 	 * @param by
@@ -220,6 +211,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver types in element
 	 * 
 	 * @param element
 	 * @param text
@@ -232,8 +224,10 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets text in element
 	 * 
 	 * @param element
+	 * @return
 	 */
 	public String getText(WebElement element) {
 		String text = "";
@@ -244,6 +238,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets element attribute
 	 * 
 	 * @param element
 	 * @param attribute
@@ -258,6 +253,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver gets element tag
 	 * 
 	 * @param element
 	 * @return
@@ -271,6 +267,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver checks if element is displayed
 	 * 
 	 * @param element
 	 * @return
@@ -279,6 +276,13 @@ public class Utility {
 		return element.isDisplayed();
 	}
 
+	/**
+	 * Driver checks if elements are displayed
+	 * 
+	 * @param driver
+	 * @param selectors
+	 * @return
+	 */
 	public boolean areElementsDisplayed(WebDriver driver, By[] selectors) {
 		boolean flag = false;
 		log.log("Expected Image not displayed, checking for element presence in page");
@@ -290,6 +294,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver checks if text is in element
 	 * 
 	 * @param driver
 	 * @param selector
@@ -303,6 +308,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver checks if text is in element
 	 * 
 	 * @param element
 	 * @param text
@@ -317,6 +323,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver checks if element is selected
 	 * 
 	 * @param element
 	 * @return
@@ -326,9 +333,10 @@ public class Utility {
 	}
 
 	/**
+	 * Driver clicks element
 	 * 
-	 * @param element
-	 * @return
+	 * @param driver
+	 * @param by
 	 */
 	public void click(WebDriver driver, By by) {
 		WebElement element = driver.findElement(by);
@@ -339,9 +347,10 @@ public class Utility {
 	}
 
 	/**
+	 * Driver clicks element
 	 * 
+	 * @param driver
 	 * @param element
-	 * @return
 	 * @throws Exception
 	 */
 	public void click(WebDriver driver, WebElement element) throws Exception {
@@ -355,23 +364,10 @@ public class Utility {
 	}
 
 	/**
+	 * Driver hovers mouse on element
 	 * 
+	 * @param driver
 	 * @param element
-	 * @return
-	 */
-	public void hover(WebDriver driver, By by) {
-		WebElement element = driver.findElement(by);
-		Actions action = new Actions(driver);
-
-		if (element != null) {
-			action.moveToElement(element).build().perform();
-		}
-	}
-
-	/**
-	 * 
-	 * @param element
-	 * @return
 	 * @throws Exception
 	 */
 	public void hover(WebDriver driver, WebElement element) throws Exception {
@@ -384,6 +380,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver scrolls down by 350px
 	 * 
 	 * @param driver
 	 * @throws Exception
@@ -398,6 +395,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver scrolls to bottom of webpage
 	 * 
 	 * @param driver
 	 * @throws Exception
@@ -413,6 +411,7 @@ public class Utility {
 	}
 
 	/**
+	 * Driver scrolls up by 250 px
 	 * 
 	 * @param driver
 	 * @throws Exception
@@ -427,6 +426,7 @@ public class Utility {
 	}
 
 	/**
+	 * Sikuli checks if image is in screen
 	 * 
 	 * @param screen
 	 * @param fileLoc
@@ -448,6 +448,7 @@ public class Utility {
 	}
 
 	/**
+	 * Sikuli highlight located image in screen
 	 * 
 	 * @param screen
 	 * @param pattern
@@ -462,223 +463,17 @@ public class Utility {
 	}
 
 	/**
+	 * Driver takes screenshot
 	 * 
-	 * @param length
-	 * @return
-	 */
-	public static String generateString(int length) {
-		String characters = "abcdefghijklmnopqrstuvwxyz";
-
-		char[] text = new char[length];
-		for (int i = 0; i < length; i++) {
-			text[i] = characters.charAt(rnd.nextInt(characters.length()));
-		}
-		return new String(text);
-	}
-
-	/**
-	 * 
-	 * @param length
-	 * @return
-	 */
-	public static String generateNumbers(int length) {
-		String characters = "0123456789";
-
-		char[] text = new char[length];
-		for (int i = 0; i < length; i++) {
-			text[i] = characters.charAt(rnd.nextInt(characters.length()));
-		}
-		return new String(text);
-	}
-
-	/**
-	 * 
-	 * @param fName
-	 * @param lName
-	 * @param email
-	 * @param phone
-	 * @param pwd
-	 * @throws WriteException
+	 * @param driver
+	 * @param filename
 	 * @throws IOException
 	 */
-	public void saveToExcel(String fName, String lName, String email,
-			String phone, String pwd) throws Exception {
-		// writeExcel.saveToExcel(fName, lName, email, phone, pwd);
-		log.log("Saving values to excel sheet: " + fName + ", " + lName + ", "
-				+ email + ", " + phone + ", " + pwd);
-	}
-
-	public void saveToCSVFile(HashMap result, String filenameProd) {
-		writeTextFile.saveToCSVFile(result, filenameProd);
-		// log.log("Saving values to Text file: "+
-		// userName+", "+password+", "+billingTown);
-	}
-
-	/**
-	 * 
-	 * @param selenium
-	 * @return
-	 */
-	public String getCurrentURL(DefaultSelenium selenium) {
-		String url = "";
-		url = selenium.getLocation();
-		log.log("CURRENT PAGE URL: " + url);
-
-		return url;
-	}
-
-	/**
-	 * 
-	 * @param selenium
-	 * @return
-	 */
-	public boolean isURLSecured(DefaultSelenium selenium) {
-		boolean flag = false;
-		String token = "";
-		String url = "";
-
-		StringTokenizer st = new StringTokenizer(getCurrentURL(selenium), ":");
-		while (st.hasMoreTokens()) {
-			token = st.nextToken();
-			url = st.nextToken();
-			log.log("Security: " + token);
-			flag = token.equalsIgnoreCase("https");
-		}
-		return flag;
-	}
-
-	/**
-	 * 
-	 * @param selenium
-	 * @param fileName
-	 * @return
-	 */
-	public boolean captureScreenshot(DefaultSelenium selenium, String fileName) {
-		boolean flag = false;
-		log.log("Capturing screenshot...");
-		selenium.captureScreenshot(fileName);
-
-		return flag;
-	}
-
-	/**
-	 * 
-	 * @param selenium
-	 * @param xpath
-	 * @return
-	 */
-	public int getXpathCount(DefaultSelenium selenium, String xpath) {
-		int count = 0;
-
-		log.log("Getting XPATH count...");
-		count = new Integer(selenium.getXpathCount(xpath).toString())
-				.intValue();
-		log.log("XPATH COUNT: " + count);
-
-		return count;
-	}
-
-	/**
-	 * 
-	 * @param text
-	 * @return
-	 */
-	public List split(String text, String delimiter) {
-		List tokenized = new ArrayList();
-
-		StringTokenizer st = new StringTokenizer(text, delimiter);
-		while (st.hasMoreTokens()) {
-			tokenized.add(st.nextToken());
-		}
-
-		System.out.println("tokenized: " + tokenized);
-		return tokenized;
-	}
-
-	/**
-	 * 
-	 * @param list1
-	 * @param list2
-	 * @return
-	 */
-	public boolean compareList(List list1, List list2) {
-		boolean flag = true;
-
-		Collection<String> listOne = list1;
-		Collection<String> listTwo = list2;
-
-		Collection<String> similar = new HashSet<String>(listOne);
-		Collection<String> different = new HashSet<String>();
-		different.addAll(listOne);
-		different.addAll(listTwo);
-
-		similar.retainAll(listTwo);
-		different.removeAll(similar);
-
-		if (different.size() > 0) {
-			flag = false;
-		}
-
-		System.out.printf("One:%s%nTwo:%s%nSimilar:%s%nDifferent:%s%n",
-				listOne, listTwo, similar, different);
-
-		return flag;
-	}
-
-	/**
-	 * 
-	 * @param list
-	 * @param element
-	 */
-	public List removeElementFromList(List list, String element) {
-		List newList = list;
-
-		for (int i = 0; i < list.size(); i++) {
-			if (element.equalsIgnoreCase(list.get(i).toString())) {
-				list.remove(i);
-			}
-		}
-
-		return newList;
-	}
-
-	/**
-	 * 
-	 * @param list1
-	 * @return
-	 */
-	public StringBuffer convertListToString(List list1, String delimiter) {
-		StringBuffer convertedToString = new StringBuffer();
-		for (int i = 0; i < list1.size(); i++) {
-			convertedToString.append(list1.get(i)).append(delimiter);
-		}
-
-		return convertedToString;
-	}
-
-	/**
-	 * 
-	 * @param rowNum
-	 * @param cellNum
-	 * @param result
-	 * @throws Exception
-	 */
-	public void saveResultsToExcel(String rowNum, String cellNum, String result)
-			throws Exception {
-		System.out.println("Saving values to file: " + result);
-		writeExcel.writeResultsToExcel(Integer.parseInt(rowNum),
-				Integer.parseInt(cellNum), result);
-
-	}
-
-	public void takeScreenshot(WebDriver driver) throws IOException {
+	public void takeScreenshot(WebDriver driver, String filename)
+			throws IOException {
 		File scrFile = ((TakesScreenshot) driver)
 				.getScreenshotAs(OutputType.FILE);
-		FileUtils
-				.copyFile(
-						scrFile,
-						new File(
-								"C:\\Users\\stephb\\workspace\\AngloInfoTesting\\reports\\screenshot.png"));
+		FileUtils.copyFile(scrFile, new File(filename));
 	}
 
 }

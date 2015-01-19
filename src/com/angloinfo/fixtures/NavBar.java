@@ -7,7 +7,7 @@ import org.sikuli.script.Screen;
 
 import com.angloinfo.util.LogUtil;
 import com.angloinfo.util.StringConstants;
-import com.angloinfo.util.Utility;
+import com.angloinfo.util.SikuliDriverUtility;
 
 /**
  * Contains all test methods
@@ -16,7 +16,7 @@ import com.angloinfo.util.Utility;
  * 
  */
 public class NavBar {
-	Utility utility = Utility.getInstance();
+	SikuliDriverUtility sikuliDriver = SikuliDriverUtility.getInstance();
 	LogUtil log = LogUtil.getInstance();
 
 	private static NavBar instance = new NavBar();
@@ -40,9 +40,9 @@ public class NavBar {
 		By[] selectors = { By.id(Locators.UL_MAIN_MENU),
 				By.id(Locators.UL_MY_ANGLOINFO) };
 
-		utility.scrollDown(driver);
-		if (utility.isImgInScreen(screen, Locators.IMG_NAV_BAR)
-				|| utility.areElementsDisplayed(driver, selectors)) {
+		sikuliDriver.scrollDown(driver);
+		if (sikuliDriver.isImgInScreen(screen, Locators.IMG_NAV_BAR)
+				|| sikuliDriver.areElementsDisplayed(driver, selectors)) {
 			flag = true;
 		}
 
@@ -70,7 +70,7 @@ public class NavBar {
 		String[] expectedText = { StringConstants.DIRECTORY,
 				StringConstants.DIRECTORY_VERBIAGE };
 
-		WebElement lnkDirectory = utility.getElement(driver,
+		WebElement lnkDirectory = sikuliDriver.getElement(driver,
 				By.xpath(Locators.LNK_NAV_DIRECTORY));
 
 		isHoverVisible(driver, screen, lnkDirectory,
@@ -101,7 +101,7 @@ public class NavBar {
 		String[] expectedText = { StringConstants.WHATS_ON,
 				StringConstants.CLASSIFIEDS_VERBIAGE };
 		
-		WebElement lnkWhatsOn = utility.getElement(driver,
+		WebElement lnkWhatsOn = sikuliDriver.getElement(driver,
 				By.xpath(Locators.LNK_NAV_WHATS_ON));
 
 		isHoverVisible(driver, screen, lnkWhatsOn,
@@ -132,7 +132,7 @@ public class NavBar {
 		String[] expectedText = { StringConstants.DISCUSSIONS,
 				StringConstants.DISCUSSION_VERBIAGE };
 		
-		WebElement lnkDiscussions = utility.getElement(driver,
+		WebElement lnkDiscussions = sikuliDriver.getElement(driver,
 				By.xpath(Locators.LNK_NAV_DISCUSSION));
 		
 		isHoverVisible(driver, screen, lnkDiscussions,
@@ -163,7 +163,7 @@ public class NavBar {
 		String[] expectedText = { StringConstants.CLASSIFIEDS,
 				StringConstants.CLASSIFIEDS_VERBIAGE };
 
-		WebElement lnkClassifieds = utility.getElement(driver,
+		WebElement lnkClassifieds = sikuliDriver.getElement(driver,
 				By.xpath(Locators.LNK_NAV_CLASSIFIEDS));
 
 		isHoverVisible(driver, screen, lnkClassifieds,
@@ -193,7 +193,7 @@ public class NavBar {
 		String[] expectedText = { StringConstants.GUIDES,
 				StringConstants.GUIDES_VERBIAGE };
 
-		WebElement lnkGuides = utility.getElement(driver,
+		WebElement lnkGuides = sikuliDriver.getElement(driver,
 				By.xpath(Locators.LNK_NAV_GUIDES));
 
 		isHoverVisible(driver, screen, lnkGuides, Locators.IMG_HOVER_GUIDES);
@@ -207,8 +207,8 @@ public class NavBar {
 		boolean flag = false;
 		log.log("Hover and click: " + lnkElement.getText());
 
-		utility.hover(driver, lnkElement);
-		if (!utility.isImgInScreen(screen, imgLocator)) {
+		sikuliDriver.hover(driver, lnkElement);
+		if (!sikuliDriver.isImgInScreen(screen, imgLocator)) {
 
 			log.log("Hover Image not displayed.");
 		} else {
@@ -224,12 +224,12 @@ public class NavBar {
 			String[] textArr) throws Exception {
 		boolean flag = false;
 
-		utility.click(driver, lnkElement);
-		if (utility.isImgInScreen(screen, imgLocator)
-				|| (utility.areElementsDisplayed(driver, selectors)
-						&& utility.isTextInElement(driver,
+		sikuliDriver.click(driver, lnkElement);
+		if (sikuliDriver.isImgInScreen(screen, imgLocator)
+				|| (sikuliDriver.areElementsDisplayed(driver, selectors)
+						&& sikuliDriver.isTextInElement(driver,
 								By.cssSelector(Locators.DIV_BANNER_TEXT),
-								textArr[1]) && utility.isTextInElement(driver,
+								textArr[1]) && sikuliDriver.isTextInElement(driver,
 						By.cssSelector(Locators.DIV_BANNER_TEXT), textArr[2]))) {
 			flag = true;
 
