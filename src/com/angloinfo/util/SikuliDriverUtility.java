@@ -15,6 +15,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.sikuli.script.FindFailed;
 import org.sikuli.script.Pattern;
 import org.sikuli.script.Region;
 import org.sikuli.script.Screen;
@@ -345,6 +346,18 @@ public class SikuliDriverUtility {
 			element.click();
 		}
 	}
+	
+	/**
+	 */
+	
+	public void click(Screen screen, String filename) throws FindFailed {
+		
+		String fileLoc = imageLoc + filename;
+		log.log(fileLoc);
+		Pattern pattern = new Pattern(fileLoc);
+		screen.click(pattern);
+	}
+
 
 	/**
 	 * Driver clicks element

@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-AngloInfo_Testing">
-                    <span>C:\Users\stephb\workspace\AngloInfoTesting\testSuite\testSuiteAngloInfo.xml</span>
+                    <span>C:\Users\GrizelS\Documents\GitHub\AngloInfoTesting\testSuite\testSuiteAngloInfo.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,39 +101,10 @@
                     <div class="method-list-content failed suite-AngloInfo_Testing">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-AngloInfo_Testing" title="com.angloinfo.tests.FooterTest" hash-for-method="testDiscussionRedirection">testDiscussionRedirection</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-AngloInfo_Testing" title="com.angloinfo.tests.RegistrationTest" hash-for-method="testRegistration">testRegistration</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-AngloInfo_Testing -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-AngloInfo_Testing" class="hide-methods passed suite-AngloInfo_Testing"> (hide)</a> <!-- hide-methods passed suite-AngloInfo_Testing -->
-                      <a href="#" panel-name="suite-AngloInfo_Testing" class="show-methods passed suite-AngloInfo_Testing"> (show)</a> <!-- show-methods passed suite-AngloInfo_Testing -->
-                    </span>
-                    <div class="method-list-content passed suite-AngloInfo_Testing">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-AngloInfo_Testing" title="com.angloinfo.tests.FooterTest" hash-for-method="testDirectoryRedirection">testDirectoryRedirection</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-AngloInfo_Testing" title="com.angloinfo.tests.FooterTest" hash-for-method="testGuidesRedirection">testGuidesRedirection</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-AngloInfo_Testing" title="com.angloinfo.tests.FooterTest" hash-for-method="testScrolling">testScrolling</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-AngloInfo_Testing" title="com.angloinfo.tests.FooterTest" hash-for-method="testWhatsOnRedirection">testWhatsOnRedirection</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-AngloInfo_Testing -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -148,26 +119,26 @@
           <div class="suite-AngloInfo_Testing-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.angloinfo.tests.FooterTest</span>
+              <span class="class-name">com.angloinfo.tests.RegistrationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testDiscussionRedirection">
-                  </a> <!-- testDiscussionRedirection -->
-                  <span class="method-name">testDiscussionRedirection</span>
-                  <div class="stack-trace">FindFailed: can not find P(C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\discussions.png) S: 0.7 on the screen.
+                  <a name="testRegistration">
+                  </a> <!-- testRegistration -->
+                  <span class="method-name">testRegistration</span>
+                  <div class="stack-trace">FindFailed: can not find P(C:\\Users\\GrizelS\\Documents\\GitHub\\AngloInfoTesting\\expectedImg\\register.png) S: 0.7 on the screen.
   Line 1574, in file Region.java
 
 	at org.sikuli.script.Region.handleFindFailed(Region.java:1574)
 	at org.sikuli.script.Region.wait(Region.java:1682)
-	at com.angloinfo.util.Utility.isImgInScreen(Utility.java:442)
-	at com.angloinfo.fixtures.Footer.isPageDisplayed(Footer.java:219)
-	at com.angloinfo.fixtures.Footer.isDiscussionsDisplayed(Footer.java:150)
-	at com.angloinfo.tests.FooterTest.testDiscussionRedirection(FooterTest.java:58)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at com.angloinfo.util.SikuliDriverUtility.isImgInScreen(SikuliDriverUtility.java:455)
+	at com.angloinfo.fixtures.Registration.isPageDisplayed(Registration.java:108)
+	at com.angloinfo.fixtures.Registration.isRegistrationDisplayed(Registration.java:44)
+	at com.angloinfo.tests.RegistrationTest.testRegistration(RegistrationTest.java:25)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:745)
 ... Removed 16 stack frames
 </div> <!-- stack-trace -->
@@ -175,67 +146,31 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-AngloInfo_Testing-class-failed -->
-          <div class="suite-AngloInfo_Testing-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.angloinfo.tests.FooterTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testDirectoryRedirection">
-                  </a> <!-- testDirectoryRedirection -->
-                  <span class="method-name">testDirectoryRedirection</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGuidesRedirection">
-                  </a> <!-- testGuidesRedirection -->
-                  <span class="method-name">testGuidesRedirection</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testScrolling">
-                  </a> <!-- testScrolling -->
-                  <span class="method-name">testScrolling</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testWhatsOnRedirection">
-                  </a> <!-- testWhatsOnRedirection -->
-                  <span class="method-name">testWhatsOnRedirection</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-AngloInfo_Testing-class-passed -->
         </div> <!-- panel AngloInfo_Testing -->
         <div panel-name="test-xml-AngloInfo_Testing" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\stephb\workspace\AngloInfoTesting\testSuite\testSuiteAngloInfo.xml</span>
+            <span class="header-content">C:\Users\GrizelS\Documents\GitHub\AngloInfoTesting\testSuite\testSuiteAngloInfo.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;1&quot; name=&quot;AngloInfo Testing&quot; parallel=&quot;tests&quot;&gt;
-  &lt;parameter name=&quot;browser.host&quot; value=&quot;WKSN-063&quot;/&gt;
-  &lt;parameter name=&quot;browser.testBrowser&quot; value=&quot;*firefox&quot;/&gt;
-  &lt;parameter name=&quot;browser.port&quot; value=&quot;4444&quot;/&gt;
+  &lt;parameter name=&quot;ai.autoAuthFile&quot; value=&quot;C:\\Users\\GrizelS\\Documents\\GitHub\\AngloInfoTesting\\resources\\autoauth-2.1-fx+fn.xpi&quot;/&gt;
   &lt;parameter name=&quot;browser.url&quot; value=&quot;http://cumberbatch.me&quot;/&gt;
-  &lt;parameter name=&quot;ai.propertiesFile&quot; value=&quot;C:\\Users\\stephb\\workspace\\AngloInfoTesting\\resources\\aiData.properties&quot;/&gt;
-  &lt;parameter name=&quot;ai.autoAuthFile&quot; value=&quot;C:\\Users\\stephb\\workspace\\AngloInfoTesting\\resources\\autoauth-2.1-fx+fn.xpi&quot;/&gt;
-  &lt;parameter name=&quot;ai.expectedImg&quot; value=&quot;C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\&quot;/&gt;
+  &lt;parameter name=&quot;browser.testBrowser&quot; value=&quot;*firefox&quot;/&gt;
+  &lt;parameter name=&quot;ai.expectedImg&quot; value=&quot;C:\\Users\\GrizelS\\Documents\\GitHub\\AngloInfoTesting\\expectedImg\\&quot;/&gt;
+  &lt;parameter name=&quot;browser.port&quot; value=&quot;4444&quot;/&gt;
+  &lt;parameter name=&quot;ai.propertiesFile&quot; value=&quot;C:\\Users\\GrizelS\\Documents\\GitHub\\AngloInfoTesting\\resources\\aiData.properties&quot;/&gt;
+  &lt;parameter name=&quot;browser.host&quot; value=&quot;WKSL-014&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.angloinfo.interceptor.PriorityInterceptor&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;Footer Test&quot;&gt;
+  &lt;test name=&quot;Registration Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.angloinfo.tests.FooterTest&quot;/&gt;
+      &lt;class name=&quot;com.angloinfo.tests.RegistrationTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Footer Test --&gt;
+  &lt;/test&gt; &lt;!-- Registration Test --&gt;
 &lt;/suite&gt; &lt;!-- AngloInfo Testing --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -247,7 +182,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Footer Test (1 class)</span>
+                <span class="test-name">Registration Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -273,32 +208,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testDiscussionRedirection')
-data.setCell(0, 2, 'com.angloinfo.tests.FooterTest')
-data.setCell(0, 3, 31849);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testGuidesRedirection')
-data.setCell(1, 2, 'com.angloinfo.tests.FooterTest')
-data.setCell(1, 3, 30689);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testWhatsOnRedirection')
-data.setCell(2, 2, 'com.angloinfo.tests.FooterTest')
-data.setCell(2, 3, 28419);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testDirectoryRedirection')
-data.setCell(3, 2, 'com.angloinfo.tests.FooterTest')
-data.setCell(3, 3, 28416);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testScrolling')
-data.setCell(4, 2, 'com.angloinfo.tests.FooterTest')
-data.setCell(4, 3, 21139);
+data.setCell(0, 1, 'testRegistration')
+data.setCell(0, 2, 'com.angloinfo.tests.RegistrationTest')
+data.setCell(0, 3, 67016);
 window.suiteTableData['AngloInfo_Testing']= { tableData: data, tableDiv: 'times-div-AngloInfo_Testing'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-AngloInfo_Testing">
               </div> <!-- times-div-AngloInfo_Testing -->
             </div> <!-- times-div -->
@@ -310,51 +229,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">testDirectoryRedirection</span>
+              <span class="reporter-method-name">testRegistration</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">STARTING: AI-81: I want to be able to view directory page</span>
-                <span class="reporter-method-output">Scrolling to Bottom...</span>
+                <span class="reporter-method-output">Starting Registration test</span>
+                <span class="reporter-method-output">Navigating...</span>
+                <span class="reporter-method-output">displayed!!!</span>
                 <span class="reporter-method-output">Clicking...</span>
-                <span class="reporter-method-output">C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\directory.png</span>
-                <span class="reporter-method-output">EXITING: AI-81: I want to be able to view directory page</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testScrolling</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">STARTING: AI-110: Checks if user can see the footer on page bottom</span>
-                <span class="reporter-method-output">Scrolling to Bottom...</span>
-                <span class="reporter-method-output">C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\footer.png</span>
-                <span class="reporter-method-output">EXITING: AI-110: Checks if user can see the footer on page bottom</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testGuidesRedirection</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">STARTING:  I want to be able to view guides page</span>
-                <span class="reporter-method-output">Scrolling to Bottom...</span>
+                <span class="reporter-method-output">Clicked myangloinfo!</span>
                 <span class="reporter-method-output">Clicking...</span>
-                <span class="reporter-method-output">C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\guides.png</span>
-                <span class="reporter-method-output">EXITING: I want to be able to view guides page</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testWhatsOnRedirection</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">STARTING: I want to be able to view what's on page</span>
-                <span class="reporter-method-output">Scrolling to Bottom...</span>
+                <span class="reporter-method-output">Clicked register link!</span>
                 <span class="reporter-method-output">Clicking...</span>
-                <span class="reporter-method-output">C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\whatsOn.png</span>
-                <span class="reporter-method-output">EXITING:I want to be able to view what's on page</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">testDiscussionRedirection</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">STARTING: I want to be able to view forum page</span>
-                <span class="reporter-method-output">Scrolling to Bottom...</span>
+                <span class="reporter-method-output">Clicked register button!</span>
                 <span class="reporter-method-output">Clicking...</span>
-                <span class="reporter-method-output">C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\discussions.png</span>
+                <span class="reporter-method-output">C:\\Users\\GrizelS\\Documents\\GitHub\\AngloInfoTesting\\expectedImg\\register.png</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -372,36 +259,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.angloinfo.tests.FooterTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.angloinfo.tests.RegistrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setUP(WKSN-063, http://cumberbatch.me, *firefox, 4444, C:\\Users\\stephb\\workspace\\AngloInfoTesting\\res...)</span>
+                <span class="method-name">setUP(WKSL-014, http://cumberbatch.me, *firefox, 4444, C:\\Users\\GrizelS\\Documents\\GitHub\\AngloInfoTes...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">testScrolling</span>
-                <span class="method-start">17227 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testGuidesRedirection</span>
-                <span class="method-start">38366 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testDirectoryRedirection</span>
-                <span class="method-start">69055 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testWhatsOnRedirection</span>
-                <span class="method-start">97472 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testDiscussionRedirection</span>
-                <span class="method-start">125891 ms</span>
+                <span class="method-name">testRegistration</span>
+                <span class="method-start">54861 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">157741 ms</span>
+                <span class="method-start">121878 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -9,13 +9,13 @@ i.e. <suite name="MyTestSuiteName" >
     	<listener class-name="com.angloinfo.interceptor.PriorityInterceptor" />
   	</listeners>
 	
-	<parameter name="browser.host" value="WKSN-063" />
+	<parameter name="browser.host" value="WKSL-014" />
 	<parameter name="browser.port" value="4444" />
 	<parameter name="browser.testBrowser" value="*firefox" />
 	<parameter name="browser.url" value="http://cumberbatch.me" />
-	<parameter name="ai.propertiesFile" value="C:\\Users\\stephb\\workspace\\AngloInfoTesting\\resources\\aiData.properties" />
-	<parameter name="ai.autoAuthFile" value="C:\\Users\\stephb\\workspace\\AngloInfoTesting\\resources\\autoauth-2.1-fx+fn.xpi" />
-	<parameter name="ai.expectedImg" value="C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\" />
+	<parameter name="ai.propertiesFile" value="C:\\Users\\GrizelS\\Documents\\GitHub\\AngloInfoTesting\\resources\\aiData.properties"/>
+	<parameter name="ai.autoAuthFile" value="C:\\Users\\GrizelS\\Documents\\GitHub\\AngloInfoTesting\\resources\\autoauth-2.1-fx+fn.xpi" />
+	<parameter name="ai.expectedImg" value="C:\\Users\\GrizelS\\Documents\\GitHub\\AngloInfoTesting\\expectedImg\\" />
 
 <!-- 
 <test name="Directory Test" preserve-order="true" annotations="JDK">
@@ -32,10 +32,17 @@ i.e. <suite name="MyTestSuiteName" >
         <classes preserve-order="true"> 
         	<class preserve-order="true" name="com.angloinfo.tests.NavBarTest" /> 
         </classes>	
-</test>    -->
+</test>  
 <test name="Footer Test" preserve-order="true" annotations="JDK">
         <classes preserve-order="true"> 
         	<class preserve-order="true" name="com.angloinfo.tests.FooterTest" /> 
         </classes>	
-</test>  
+</test>
+-->
+
+<test name="Registration Test" preserve-order="true" annotations="JDK">
+        <classes preserve-order="true"> 
+        	<class preserve-order="true" name="com.angloinfo.tests.RegistrationTest" /> 
+        </classes>	
+</test> 
 </suite>

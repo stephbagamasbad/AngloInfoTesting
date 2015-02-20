@@ -22,6 +22,7 @@ import com.angloinfo.fixtures.Directory;
 import com.angloinfo.fixtures.Footer;
 import com.angloinfo.fixtures.Guides;
 import com.angloinfo.fixtures.NavBar;
+import com.angloinfo.fixtures.Registration;
 import com.angloinfo.util.LogUtil;
 import com.angloinfo.util.PropertyLoader;
 import com.angloinfo.util.SikuliDriverUtility;
@@ -40,6 +41,7 @@ public class TestBase {
 	protected Classifieds classifieds= Classifieds.getInstance();
 	protected NavBar nav= NavBar.getInstance();
 	protected Footer footer= Footer.getInstance();
+	protected Registration register = Registration.getInstance();
 	
 	
 	SikuliDriverUtility sikuliDriver = SikuliDriverUtility.getInstance();

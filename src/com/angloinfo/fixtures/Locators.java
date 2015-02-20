@@ -13,7 +13,10 @@ public class Locators {
 	public static final String NAV_TOP_BAR="topBar";
 	public static final String DIV_BANNER="page-banner";
 	public static final String DIV_MAP_CANVAS="map-canvas";
-	
+	public static final String DIV_REG_FORM= "registration-form";
+	public static final String DRP_MYANGLOINFO = "myangloDropdownToggle";
+
+		
 	//XPATH
 	public static final String LNK_NAV_DIRECTORY = "//*[@id='mainmenu']/li[2]/a";
 	public static final String LNK_NAV_GUIDES= "//*[@id='mainmenu']/li[1]/a";
@@ -29,8 +32,8 @@ public class Locators {
 	public static final String LNK_FOOTER_GUIDES= "//*[@id='nav-columns']/div[2]/ul/li[1]/a";
 	public static final String LNK_FOOTER_WHATS_ON = "//*[@id='nav-columns']/div[2]/ul/li[3]/a";
 	public static final String LNK_FOOTER_DISCUSSION= "//*[@id='nav-columns']/div[2]/ul/li[4]/a";
-//	public static final String LNK_FOOTER_CLASSIFIEDS= "//*[@id='nav-columns']/div[2]/ul/li[5]/a";
-	
+	public static final String BTN_REGISTER = "//*[@id='registration-box']/a[1]";
+
 	//CSS
 	public static final String LNK_HEALTH_BEAUTY = ".col-md-3.selection>h2>a";
 	public static final String IMG_LOGO = ".logo";
@@ -43,6 +46,7 @@ public class Locators {
 	
 	public static final String DIV_ADD_LISTING =".add-listing.visible-md.visible-lg";
 	public static final String DIV_BANNER_TEXT=".banner-text";
+	public static final String LNK_REGISTER = ".btn.btn-lg.btn-link";
 	
 	//Imagelocations
 	public static final String IMG_FOOTER= "footer.png";
@@ -59,6 +63,8 @@ public class Locators {
 	public static final String IMG_HOVER_DISCUSSIONS = "hoverDiscussions.png";
 	public static final String IMG_HOVER_CLASSIFIEDS = "hoverClassifieds.png";
 	public static final String IMG_HOVER_GUIDES = "hoverGuides.png";
+	public static final String IMG_REGISTER = "register.png";
+	public static final String IMG_REGISTER_DROPDOWN = "registerDropdown.png";
 	
 
 }

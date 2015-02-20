@@ -100,7 +100,7 @@
 <th>Tests</th><th>Failures</th><th>Errors</th><th>Skipped</th><th>Success rate</th><th>Time</th>
 </tr>
 <tr valign="top" class="Failure">
-<td>5</td><td>1</td><td>0</td><td>0</td><td>80.00%</td><td>140.512</td>
+<td>1</td><td>1</td><td>0</td><td>0</td><td>0.00%</td><td>67.016</td>
 </tr>
 </table>
 <table border="0" width="95%">
@@ -118,7 +118,7 @@
 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
 </tr>
 <tr valign="top" class="Failure">
-<td><a href="#com.angloinfo.tests">com.angloinfo.tests</a></td><td>5</td><td>0</td><td>1</td><td>0</td><td>140.512</td><td>21 Nov 2014 10:35:54 GMT</td><td>WKSN-063</td>
+<td><a href="#com.angloinfo.tests">com.angloinfo.tests</a></td><td>1</td><td>0</td><td>1</td><td>0</td><td>67.016</td><td>20 Feb 2015 09:38:50 GMT</td><td>wksl-014</td>
 </tr>
 </table>
 <hr size="1" width="95%" align="left">
@@ -129,43 +129,31 @@
 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
 </tr>
 <tr valign="top" class="Failure">
-<td><a href="#FooterTest">FooterTest</a></td><td>5</td><td>0</td><td>1</td><td></td><td>140.512</td><td>21 Nov 2014 10:35:54 GMT</td><td>WKSN-063</td>
+<td><a href="#RegistrationTest">RegistrationTest</a></td><td>1</td><td>0</td><td>1</td><td></td><td>67.016</td><td>20 Feb 2015 09:38:50 GMT</td><td>wksl-014</td>
 </tr>
 </table>
 <a href="#top">Back to top</a>
 <p></p>
 <p></p>
 <hr size="1" width="95%" align="left">
-<a name="FooterTest"></a>
-<h3>TestCase FooterTest</h3>
+<a name="RegistrationTest"></a>
+<h3>TestCase RegistrationTest</h3>
 <table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
 <tr valign="top">
 <th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
 </tr>
-<tr valign="top" class="">
-<td>testDirectoryRedirection</td><td>Success</td><td></td><td>28.416</td>
-</tr>
 <tr valign="top" class="Error">
-<td>testDiscussionRedirection</td><td>Failure</td><td>can not find P(C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\discussions.png) S: 0.7 on the screen.<code>
+<td>testRegistration</td><td>Failure</td><td>can not find P(C:\\Users\\GrizelS\\Documents\\GitHub\\AngloInfoTesting\\expectedImg\\register.png) S: 0.7 on the screen.<code>
 <br>
 <br>
-<br>      FindFailed: can not find P(C:\\Users\\stephb\\workspace\\AngloInfoTesting\\expectedImg\\discussions.png) S: 0.7 on the screen.<br>  Line 1574, in file Region.java<br>
-<br>	at org.sikuli.script.Region.handleFindFailed(Region.java:1574)<br>	at org.sikuli.script.Region.wait(Region.java:1682)<br>	at com.angloinfo.util.Utility.isImgInScreen(Utility.java:442)<br>	at com.angloinfo.fixtures.Footer.isPageDisplayed(Footer.java:219)<br>	at com.angloinfo.fixtures.Footer.isDiscussionsDisplayed(Footer.java:150)<br>	at com.angloinfo.tests.FooterTest.testDiscussionRedirection(FooterTest.java:58)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>	at java.lang.reflect.Method.invoke(Method.java:483)<br>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br>	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>	at org.testng.TestRunner.privateRun(TestRunner.java:767)<br>	at org.testng.TestRunner.run(TestRunner.java:617)<br>	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)<br>	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)<br>	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)<br>	at java.util.concurrent.FutureTask.run(FutureTask.java:266)<br>	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br>	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br>	at java.lang.Thread.run(Thread.java:745)<br>
+<br>      FindFailed: can not find P(C:\\Users\\GrizelS\\Documents\\GitHub\\AngloInfoTesting\\expectedImg\\register.png) S: 0.7 on the screen.<br>  Line 1574, in file Region.java<br>
+<br>	at org.sikuli.script.Region.handleFindFailed(Region.java:1574)<br>	at org.sikuli.script.Region.wait(Region.java:1682)<br>	at com.angloinfo.util.SikuliDriverUtility.isImgInScreen(SikuliDriverUtility.java:455)<br>	at com.angloinfo.fixtures.Registration.isPageDisplayed(Registration.java:108)<br>	at com.angloinfo.fixtures.Registration.isRegistrationDisplayed(Registration.java:44)<br>	at com.angloinfo.tests.RegistrationTest.testRegistration(RegistrationTest.java:25)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)<br>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>	at java.lang.reflect.Method.invoke(Method.java:606)<br>	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)<br>	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>	at org.testng.TestRunner.privateRun(TestRunner.java:767)<br>	at org.testng.TestRunner.run(TestRunner.java:617)<br>	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)<br>	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)<br>	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)<br>	at java.util.concurrent.FutureTask.run(FutureTask.java:262)<br>	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)<br>	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)<br>	at java.lang.Thread.run(Thread.java:745)<br>
 <br>    
-</code></td><td>31.849</td>
-</tr>
-<tr valign="top" class="">
-<td>testScrolling</td><td>Success</td><td></td><td>21.139</td>
-</tr>
-<tr valign="top" class="">
-<td>testGuidesRedirection</td><td>Success</td><td></td><td>30.689</td>
-</tr>
-<tr valign="top" class="">
-<td>testWhatsOnRedirection</td><td>Success</td><td></td><td>28.419</td>
+</code></td><td>67.016</td>
 </tr>
 </table>
 <div class="Properties">
-<a href="javascript:displayProperties('com.angloinfo.tests.FooterTest');">
+<a href="javascript:displayProperties('com.angloinfo.tests.RegistrationTest');">
                     Properties &raquo;
                 </a>
 </div>

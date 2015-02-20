@@ -38,6 +38,7 @@ public class StringConstants {
 	public static final String DISCUSSION_VERBIAGE = "AngloINFO's discussions provide the answers you need so you can get on with life in the Cote d'Azur.";
 	public static final String DIRECTORY_VERBIAGE ="Browse our directory of english-speaking businesses and services based in the Cote d'Azur.";
 	public static final String CLASSIFIEDS_VERBIAGE ="Buy and sell anything with our local classifieds in the Cote d'Azur. Over 2,500 listings online now.";
+	public static final String REGISTER =  "Register";
 	
 	//STATUS
 	public static final String PASSED = "PASSED";
